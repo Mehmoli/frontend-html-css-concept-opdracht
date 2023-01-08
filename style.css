@@ -74,7 +74,9 @@ li,
 a {
     font-family: Roboto, Serif;
     font-weight: normal;
+    cursor: pointer;
 }
+
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
@@ -208,6 +210,7 @@ main>.inner-content-container {
     /*align-content: space-between;*/
     justify-content: space-between;
 
+
 }
 
 
@@ -218,6 +221,8 @@ main>.inner-content-container {
     /* border: 5px solid gray; */
     flex-basis: 30vw;
     margin: 60px;
+
+
 }
 
 #variety {
@@ -226,17 +231,32 @@ main>.inner-content-container {
 
 .project-blocks>img {
     width: 80px;
-    height: 8px;
+    height: 7px;
     margin: 10px 0 14px 0;
 
 }
 
 .project-blocks a {
+    font-weight: 600;
+    font-size: 0.7rem;
     color: #4845E4;
     text-transform: uppercase;
     padding-top: 30px;
 }
-
+.project-blocks a::after {
+    display: inline-block;
+    content: "";
+    width: 2%;
+    height: 2px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    background-color: #4845E4;
+    transition: width .35s ease-in-out;
+}
+.project-blocks a:hover::after {
+    /* alle andere properties worden behouden, we overschrijven alléén de width property */
+    width: 20%;
+}
 
 
 .main-project-block>div {
@@ -246,21 +266,23 @@ main>.inner-content-container {
     /*align-items: center;*/
     /*text-align: center;*/
 
+
 }
 
 
 img {
     width: 100%;
+    height: auto;
     box-shadow: rgba(0, 0, 0, 0.45) 0 25px 20px -20px;
 }
 
 .image-wrapper {
-    /* border: 5px solid brown; */
     align-self: center;
-    /* flex-basis: 800px; */
+     flex-basis: 800px;
     flex-grow: 0;
     flex-shrink: 1;
     margin: 30px;
+
 }
 
 #section_inner {
@@ -378,3 +400,4 @@ label {
     margin: 20px 0 20px 0;
     align-self: center;
 }
+
