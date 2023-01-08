@@ -19,11 +19,6 @@
 #5722cd, #4b49e8, #f2f0ff, #ed4385, #0c0c0c
 */
 
-
-/* Object
-"Han Purple":"5722cd","Majorelle Blue":"4b49e8","Magnolia":"f2f0ff","French Rose":"ed4385","Rich Black FOGRA 39":"0c0c0c"
-*/
-
 /* XML */
 /*Han Purple= hex="5722cd" r="87" g="34" b="205"
 Majorelle Blue= hex="4b49e8" r="75" g="73" b="232"
@@ -31,8 +26,13 @@ Magnolia= hex="f2f0ff" r="242" g="240" b="255"
 French Rose= hex="ed4385" r="237" g="67" b="133"
 Rich Black FOGRA 39= hex="0c0c0c" r="12" g="12" b="12"
  */
-
-
+/* Gradients
+background: hsla(241, 78%, 60%, 1);
+background: linear-gradient(315deg, hsla(241, 78%, 60%, 1) 0%, hsla(259, 72%, 47%, 1) 100%);
+background: -moz-linear-gradient(315deg, hsla(241, 78%, 60%, 1) 0%, hsla(259, 72%, 47%, 1) 100%);
+background: -webkit-linear-gradient(315deg, hsla(241, 78%, 60%, 1) 0%, hsla(259, 72%, 47%, 1) 100%);
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#4b49e8", endColorstr="#5722cd", GradientType=1 );
+ */
 
 /*////////////////////////
     Table of Contents
@@ -49,6 +49,12 @@ Rich Black FOGRA 39= hex="0c0c0c" r="12" g="12" b="12"
 ////////////////////////*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
 
 /* ------------------------------- 2. Typography ----------------------------------- */
 h1,
@@ -83,18 +89,6 @@ a {
 /* --------------- 4.2 Introduction ------------------- */
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
-
-
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 20px;
-    /* display: flex;
-    flex-direction: column; */
-
-}
-
 
 .outer-content-container {
     display: flex;
@@ -139,7 +133,6 @@ body {
 .header-content_cta {
     display: flex;
     flex-direction: column;
-    /*justify-content: center;*/
     padding: 10px 300px 200px 300px;
     align-items: center;
     text-align: center;
@@ -151,9 +144,11 @@ body {
 /***Header**: zorg ervoor dat de content van de header in het midden komt te staan. *Tip*: gebruik padding om de
 header wat meer hoogte te geven en blijf weg van letterlijke `height: 500px` properties.*/
 #header {
-    /*padding: 10px 150px 200px 150px;*/
-    background: rgb(2,0,36);
-    background: linear-gradient(153deg, rgba(2,0,36,1) 0%, rgba(107,73,232,1) 0%);
+    background: hsla(241, 78%, 60%, 1);
+    background: linear-gradient(315deg, hsla(241, 78%, 60%, 1) 0%, hsla(259, 72%, 47%, 1) 100%);
+    background: -moz-linear-gradient(315deg, hsla(241, 78%, 60%, 1) 0%, hsla(259, 72%, 47%, 1) 100%);
+    background: -webkit-linear-gradient(315deg, hsla(241, 78%, 60%, 1) 0%, hsla(259, 72%, 47%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#4b49e8", endColorstr="#5722cd", GradientType=1 );
     /*background: #4845E4;*/
     position: relative;
     color: #F3F6F9;
@@ -188,7 +183,6 @@ main>.inner-content-container {
 .main-content_one {
     display: flex;
     flex-direction: column;
-    /* border: 3px solid rgb(50, 78, 205); */
     color: #5722CD;
     font-weight: 700;
     font-size: 1.4rem;
@@ -326,7 +320,11 @@ footer .inner-content-container {
 
 #main_form {
     /* width: 1400px; */
-    background-color: #4845E4;
+    background: hsla(241, 78%, 60%, 1);
+    background: linear-gradient(315deg, hsla(241, 78%, 60%, 1) 0%, hsla(259, 72%, 47%, 1) 100%);
+    background: -moz-linear-gradient(315deg, hsla(241, 78%, 60%, 1) 0%, hsla(259, 72%, 47%, 1) 100%);
+    background: -webkit-linear-gradient(315deg, hsla(241, 78%, 60%, 1) 0%, hsla(259, 72%, 47%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#4b49e8", endColorstr="#5722cd", GradientType=1 );
     /* display: flex;
     flex-direction: column; */
     /* align-content: center; */
@@ -379,5 +377,4 @@ label {
     border-radius: 25px;
     margin: 20px 0 20px 0;
     align-self: center;
-
 }
