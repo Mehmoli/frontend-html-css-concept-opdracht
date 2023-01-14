@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-/* Hier ga ik Css schrijrijven */
 
 /*HEX-codes:*/
 /*- Paars `#5722CD`;*/
@@ -11,27 +10,6 @@
 /*- Lichtgrijs `#F3F6F9` (voor de achtergrond van de projecten)*/
 /*- Grijs `#7A7A7A` (voor de service-tegel tekst);*/
 
-/* CSV
-5722cd,4b49e8,f2f0ff,ed4385,0c0c0c
-*/
-/* With #
-#5722cd, #4b49e8, #f2f0ff, #ed4385, #0c0c0c
-*/
-
-/* XML */
-/*Han Purple= hex="5722cd" r="87" g="34" b="205"
-Majorelle Blue= hex="4b49e8" r="75" g="73" b="232"
-Magnolia= hex="f2f0ff" r="242" g="240" b="255"
-French Rose= hex="ed4385" r="237" g="67" b="133"
-Rich Black FOGRA 39= hex="0c0c0c" r="12" g="12" b="12"
- */
-/* Gradients
-background: hsla(241, 78%, 60%, 1);
-background: linear-gradient(315deg, hsla(241, 78%, 60%, 1) 0%, hsla(259, 72%, 47%, 1) 100%);
-background: -moz-linear-gradient(315deg, hsla(241, 78%, 60%, 1) 0%, hsla(259, 72%, 47%, 1) 100%);
-background: -webkit-linear-gradient(315deg, hsla(241, 78%, 60%, 1) 0%, hsla(259, 72%, 47%, 1) 100%);
-filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#4b49e8", endColorstr="#5722cd", GradientType=1 );
- */
 
 /*////////////////////////
     Table of Contents
@@ -81,24 +59,10 @@ a {
 
 /* --------------- 3.1 Reusables ----------------------- */
 
-/* --------------- 3.2 Other --------------------------- */
-
-/* ------------------------------- 4. Areas ---------------------------------------- */
-
-/* --------------- 4.1 Header ------------------------- */
-
-/* --------------- 4.2 Introduction ------------------- */
-
-/* ------------------------------- 5. Media Queries -------------------------------- */
-
 .outer-content-container {
     display: flex;
     width: 100%;
     justify-content: center;
-    /*background-color: #4845E4;*/
-    /* border: 3px dotted red; */
-    /*color: #F3F6F9;*/
-
 }
 
 .inner-content-container {
@@ -107,29 +71,50 @@ a {
     flex-basis: 1400px;
     flex-grow: 0;
     flex-shrink: 1;
-    /*padding: 10px 150px 200px 150px;*/
-    /* border: 3px dotted purple; */
-    /* border: 3px dotted purple; */
 }
 
+main>.inner-content-container {
+    height: auto;
+}
+
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------------- */
+#header {
+    background: hsla(241, 78%, 60%, 1);
+    background: linear-gradient(315deg, hsla(241, 78%, 60%, 1) 0%, hsla(259, 72%, 47%, 1) 100%);
+    background: -moz-linear-gradient(315deg, hsla(241, 78%, 60%, 1) 0%, hsla(259, 72%, 47%, 1) 100%);
+    background: -webkit-linear-gradient(315deg, hsla(241, 78%, 60%, 1) 0%, hsla(259, 72%, 47%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#4b49e8", endColorstr="#5722cd", GradientType=1);
+    color: #F3F6F9;
+    flex: 1;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 50px));
+}
+
+#header, li a {
+    color: #F3F6F9;
+}
 
 .header-heading_navigation {
     display: flex;
     justify-content: flex-end;
-    /*align-content: space-between;*/
+    padding-right: 30px;
 }
 
 .header-menu-list {
     display: flex;
     justify-content: space-between;
     flex-basis: 400px;
-    padding-top: 15px;
-    /* border: 3px solid gray; */
 }
 
 .header-menu-list-item {
     list-style: none;
 }
+
+/* --------------- 4.2 Introduction ------------------- */
 
 .header-content_cta {
     display: flex;
@@ -138,21 +123,10 @@ a {
     align-items: center;
     text-align: center;
 }
+
 .header-content_cta > h2 {
     font-weight: 300;
     font-size: 1.2em;
-}
-/***Header**: zorg ervoor dat de content van de header in het midden komt te staan. *Tip*: gebruik padding om de
-header wat meer hoogte te geven en blijf weg van letterlijke `height: 500px` properties.*/
-#header {
-    background: hsla(241, 78%, 60%, 1);
-    background: linear-gradient(315deg, hsla(241, 78%, 60%, 1) 0%, hsla(259, 72%, 47%, 1) 100%);
-    background: -moz-linear-gradient(315deg, hsla(241, 78%, 60%, 1) 0%, hsla(259, 72%, 47%, 1) 100%);
-    background: -webkit-linear-gradient(315deg, hsla(241, 78%, 60%, 1) 0%, hsla(259, 72%, 47%, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#4b49e8", endColorstr="#5722cd", GradientType=1 );
-    /*background: #4845E4;*/
-    position: relative;
-    color: #F3F6F9;
 }
 
 .submit_button_header {
@@ -165,7 +139,6 @@ header wat meer hoogte te geven en blijf weg van letterlijke `height: 500px` pro
     border-radius: 25px;
     margin: 20px 0 20px 0;
     align-self: center;
-
 }
 
 .header_squiggle {
@@ -177,18 +150,21 @@ header wat meer hoogte te geven en blijf weg van letterlijke `height: 500px` pro
     bottom: 0;
 }
 
-main>.inner-content-container {
-    height: auto;
-}
+/*--------------------------------Projects------------------------------------------*/
 
 .main-content_one {
     display: flex;
     flex-direction: column;
     color: #5722CD;
     font-weight: 700;
-    font-size: 1.4rem;
+    font-size: 1.8em;
     text-align: center;
-    padding: 20px 360px;
+    padding: 20px 160px;
+}
+
+.main-content_one,
+a {
+    color: #4845E4;
 }
 
 .main-content_one p {
@@ -205,23 +181,15 @@ main>.inner-content-container {
     background-color: #F3F6F9;
     display: flex;
     flex-direction: row;
-    /* border: 5px dotted rgb(92, 92, 38); */
-    /*align-content: space-between;*/
     justify-content: space-between;
-
-
 }
-
 
 .project-blocks {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* border: 5px solid gray; */
-    flex-basis: 30vw;
+    flex-basis: 400px;
     margin: 60px;
-
-
 }
 
 #variety {
@@ -232,7 +200,6 @@ main>.inner-content-container {
     width: 80px;
     height: 7px;
     margin: 10px 0 14px 0;
-
 }
 
 .project-blocks a {
@@ -242,6 +209,7 @@ main>.inner-content-container {
     text-transform: uppercase;
     padding-top: 30px;
 }
+
 .project-blocks a::after {
     display: inline-block;
     content: "";
@@ -252,22 +220,16 @@ main>.inner-content-container {
     background-color: #4845E4;
     transition: width .35s ease-in-out;
 }
+
 .project-blocks a:hover::after {
     /* alle andere properties worden behouden, we overschrijven alléén de width property */
     width: 20%;
 }
 
-
 .main-project-block>div {
     padding: 5px;
     display: flex;
-    /*flex-direction: row;*/
-    /*align-items: center;*/
-    /*text-align: center;*/
-
-
 }
-
 
 img {
     width: 100%;
@@ -277,40 +239,34 @@ img {
 
 .image-wrapper {
     align-self: center;
-     flex-basis: 800px;
+    flex-basis: 800px;
     flex-grow: 0;
     flex-shrink: 1;
     margin: 30px;
-
 }
 
+/*--------------------------------Work----------------------------------------------*/
+
 #section_inner {
-    height: auto;
+    width: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* justify-content: space-around; */
     flex-wrap: wrap;
     gap: 20px;
     margin-top: 70px;
     margin-bottom: 70px;
-
-    /* border: 2px solid green */
-    /* flex-basis: 400px; */
 }
 
 .inner-content-container-article {
-    height: 350px;
+    width: 28%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     border: 1px solid #5722CD;
-    /* flex-basis: 30vh; */
-    /* height: 400px; */
-    flex-basis: 28%;
-    /* padding-left: 10px; */
+    flex: 0 0 calc(100%/3 - 1em);
     box-shadow: rgb(0 0 0 / 15%) 4px 8px 15px 1px;
-;
+    position: relative;
 }
 
 .inner-content-container-article>img {
@@ -331,39 +287,27 @@ img {
     padding-left: 20px;
 }
 
-footer .inner-content-container {
-    height: 60px;
-    align-items: center;
-    justify-content: center;
-    color: #F3F6F9;
-    background-color: #0C0C0C;
-}
+/*---------------------------------Contact------------------------------------------*/
 
 #main_form {
-    /* width: 1400px; */
     background: hsla(241, 78%, 60%, 1);
     background: linear-gradient(315deg, hsla(241, 78%, 60%, 1) 0%, hsla(259, 72%, 47%, 1) 100%);
     background: -moz-linear-gradient(315deg, hsla(241, 78%, 60%, 1) 0%, hsla(259, 72%, 47%, 1) 100%);
     background: -webkit-linear-gradient(315deg, hsla(241, 78%, 60%, 1) 0%, hsla(259, 72%, 47%, 1) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#4b49e8", endColorstr="#5722cd", GradientType=1 );
-    /* display: flex;
-    flex-direction: column; */
-    /* align-content: center; */
     align-items: center;
     margin-bottom: 0;
 }
 
 #main_form>h3 {
-    font-size: 2rem;
+    font-size: 2em;
     color: #F3F6F9;
     margin-bottom: 0;
-    /* padding: 0; */
 }
 
 #main_form>p {
-    font-size: 0.6rem;
+    font-size: 0.6em;
     color: #F3F6F9;
-    /* margin: 0; */
 }
 
 textarea {
@@ -385,7 +329,6 @@ label {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* text-align: center; */
 }
 
 .submit_button {
@@ -400,3 +343,281 @@ label {
     align-self: center;
 }
 
+/*---------------------------------Footer-------------------------------------------*/
+
+footer .inner-content-container {
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    color: #F3F6F9;
+    background-color: #0C0C0C;
+}
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
+
+/*-------------1200px------------------*/
+
+@media screen and (max-width: 1200px) {
+    .header-menu-list {
+        display: flex;
+        justify-content: space-evenly;
+        flex-basis: 20em;
+        padding: 0;
+        margin-right: 1em;
+        flex-grow: 0;
+        flex-shrink: 1;
+        font-size: 1em;
+    }
+
+    .header-content_cta > h1 {
+        font-size: 2.2em;
+    }
+
+    .header-content_cta > h2 {
+        font-size: 1em;
+    }
+
+    .header-content_cta {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 20px 300px 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    #section_inner {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .inner-content-container-article {
+        flex: 0 1 auto;
+    }
+
+    .main-project-block:nth-child(odd) {
+        background-color: #F3F6F9;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-blocks {
+        flex: 0 1 calc(30% - 1em);
+    }
+
+    .image-wrapper {
+        align-self: center;
+        flex-basis: 300px;
+        flex-grow: 0;
+        flex-shrink: 1;
+        margin: 0 40px 0 40px;
+    }
+
+    #variety-span {
+        order: 2;
+    }
+}
+
+/*--------------900px------------------*/
+
+@media screen and (max-width: 900px) {
+    .header-menu-list {
+        display: flex;
+        justify-content: space-evenly;
+        flex-basis: 20em;
+        padding: 0;
+        margin-right: 1em;
+        flex-grow: 0;
+        flex-shrink: 1;
+        font-size: 1em;
+    }
+
+    .header-content_cta > h1 {
+        font-size: 1.8em;
+    }
+
+    .header-content_cta > h2 {
+        font-size: 1em;
+    }
+
+    .header-content_cta {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 20px 300px 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    #section_inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .inner-content-container-article {
+        flex: 0 1 calc(40% - 1em);
+    }
+
+    .main-project-block {
+        background-color: #F3F6F9;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .project-blocks {
+        flex: 0 1 calc(40% - 1em);
+    }
+
+    .image-wrapper {
+        align-self: center;
+        flex-basis: 200px;
+        flex-grow: 0;
+        flex-shrink: 1;
+        margin: 0 40px 0 40px;
+    }
+
+    #variety-span {
+        order: 2;
+    }
+}
+
+/*--------------600px------------------*/
+
+@media screen and (max-width: 600px) {
+    .header-menu-list {
+        display: flex;
+        justify-content: space-evenly;
+        flex-basis: 20em;
+        padding: 0;
+        margin-right: 1em;
+        flex-grow: 0;
+        flex-shrink: 1;
+        font-size: 1em;
+    }
+
+    .header-content_cta>h1 {
+        font-size: 1.5em;
+    }
+
+    .header-content_cta>h2 {
+        font-size: 1em;
+    }
+
+    .header-content_cta {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 20px 300px 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    #section_inner {
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+        width: auto;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .inner-content-container-article {
+        flex: 0 1 calc(30% - 1em);
+    }
+
+    .main-project-block {
+        background-color: #F3F6F9;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .project-blocks {
+        flex: 0 1 calc(40% - 1em);
+    }
+
+    .image-wrapper {
+        align-self: center;
+        flex-basis: 200px;
+        flex-grow: 0;
+        flex-shrink: 1;
+        margin: 0 40px 0 40px;
+    }
+
+    #variety-span {
+        order: 2;
+    }
+}
+
+/*--------------375px------------------*/
+
+@media screen and (max-width: 375px) {
+    .header-menu-list {
+        display: flex;
+        justify-content: space-evenly;
+        flex-basis: 20em;
+        padding: 0;
+        margin-right: 1em;
+        flex-grow: 0;
+        flex-shrink: 1;
+        font-size: 0.9em;
+    }
+
+    .header-content_cta>h1 {
+        font-size: 1.2em;
+    }
+
+    .header-content_cta>h2 {
+        font-size: 0.9em;
+    }
+
+    .header-content_cta {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 20px 300px 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    #section_inner {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        width: auto;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .inner-content-container-article {
+        flex: auto;
+    }
+
+    .main-project-block {
+        background-color: #F3F6F9;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .project-blocks {
+        flex: 0 1 calc(40% - 1em);
+    }
+
+    .image-wrapper {
+        align-self: center;
+        flex-basis: 200px;
+        flex-grow: 0;
+        flex-shrink: 1;
+        margin: 0 40px 0 80px;
+    }
+
+    #variety-span {
+        order: 2;
+    }
+
+}
