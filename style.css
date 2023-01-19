@@ -83,11 +83,7 @@ main>.inner-content-container {
 
 /* --------------- 4.1 Header ------------------------- */
 #header {
-    background: hsla(241, 78%, 60%, 1);
-    background: linear-gradient(315deg, hsla(241, 78%, 60%, 1) 0%, hsla(259, 72%, 47%, 1) 100%);
-    background: -moz-linear-gradient(315deg, hsla(241, 78%, 60%, 1) 0%, hsla(259, 72%, 47%, 1) 100%);
-    background: -webkit-linear-gradient(315deg, hsla(241, 78%, 60%, 1) 0%, hsla(259, 72%, 47%, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#4b49e8", endColorstr="#5722cd", GradientType=1);
+    background:linear-gradient(45deg, #4845E4, #5722CD);
     color: #F3F6F9;
     flex: 1;
     position: relative;
@@ -137,7 +133,7 @@ main>.inner-content-container {
     height: 40px;
     width: 300px;
     border-radius: 25px;
-    margin: 20px 0 20px 0;
+    margin: 20px 0;
     align-self: center;
 }
 
@@ -290,11 +286,7 @@ img {
 /*---------------------------------Contact------------------------------------------*/
 
 #main_form {
-    background: hsla(241, 78%, 60%, 1);
-    background: linear-gradient(315deg, hsla(241, 78%, 60%, 1) 0%, hsla(259, 72%, 47%, 1) 100%);
-    background: -moz-linear-gradient(315deg, hsla(241, 78%, 60%, 1) 0%, hsla(259, 72%, 47%, 1) 100%);
-    background: -webkit-linear-gradient(315deg, hsla(241, 78%, 60%, 1) 0%, hsla(259, 72%, 47%, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#4b49e8", endColorstr="#5722cd", GradientType=1 );
+    background:linear-gradient(45deg, #4845E4, #5722CD);
     align-items: center;
     margin-bottom: 0;
 }
@@ -527,7 +519,7 @@ footer .inner-content-container {
     }
 
     .inner-content-container-article {
-        flex: 0 1 calc(30% - 1em);
+        flex: 0 1 calc(50% - 1em);
     }
 
     .main-project-block {
